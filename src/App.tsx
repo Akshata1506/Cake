@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -126,7 +126,7 @@ export const App: React.FC = () => {
       </AnimatePresence>
 
       {/* Main App Content */}
-      <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+      <Router>
         <div className="relative min-h-screen bg-cream selection:bg-gold selection:text-chocolate">
           <Navbar />
           <Routes>
