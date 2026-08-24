@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
 interface CakeItem {
   id: number;
@@ -21,7 +22,7 @@ const SIGNATURE_CAKES: CakeItem[] = [
     title: "L'Aura d'Or",
     subtitle: "Dark Truffle & Edible Gold Leaf",
     price: "₹3,500",
-    image: "/cake_featured_1.png",
+    image: getAssetPath("/cake_featured_1.png"),
     desc: "A rich, single-origin 72% dark chocolate mousse layered with chocolate sponge, velvet ganache, and topped with real gold leaf — pure indulgence in every slice.",
     notes: "Deeply decadent cocoa balanced by light Madagascar vanilla bean. The texture is intensely silky and smooth.",
     ingredients: ["Dark Cocoa 72%", "Gourmet Cream", "Raw Sugar", "Gold Flakes", "Vanilla Pod"],
@@ -32,7 +33,7 @@ const SIGNATURE_CAKES: CakeItem[] = [
     title: "Brownie Royale",
     subtitle: "Fudge Brownie & Caramel Drizzle",
     price: "₹1,800",
-    image: "/cake_featured_2.png",
+    image: getAssetPath("/cake_featured_2.png"),
     desc: "Ultra-fudgy, dense brownie layers drenched in slow-cooked salted caramel, finished with a crunchy pecan crust and dark chocolate shards on top.",
     notes: "Rich, buttery chocolate with a gentle saltiness from the caramel. Each bite melts completely — no crumbling, pure luxury.",
     ingredients: ["Belgian Chocolate", "Salted Caramel", "Roasted Pecans", "Cultured Butter", "Brown Sugar"],
@@ -43,7 +44,7 @@ const SIGNATURE_CAKES: CakeItem[] = [
     title: "Velours Pistache",
     subtitle: "Pistachio Cream & Rose Frost",
     price: "₹2,800",
-    image: "/cake_featured_3.png",
+    image: getAssetPath("/cake_featured_3.png"),
     desc: "Silky Sicilian pistachio cream cake with rose-water frost, almond sponge layers, and miniature edible wildflowers — a celebration of nature's finest flavors.",
     notes: "Earthy, rich, and nutty with delicate floral notes. The slight bitterness balances the hand-churned pistachio cream perfectly.",
     ingredients: ["Sicilian Pistachios", "Rosewater", "Almond Flour", "Grass-fed Cream", "Edible Flowers"],
@@ -54,7 +55,7 @@ const SIGNATURE_CAKES: CakeItem[] = [
     title: "Choco Hazelnut Bomb",
     subtitle: "Ferrero-Style Hazelnut Truffle",
     price: "₹2,200",
-    image: "/cake_finished.png",
+    image: getAssetPath("/cake_finished.png"),
     desc: "A Ferrero-inspired showstopper — layers of hazelnut praline cream, feuilletine crunch, and milk chocolate mousse wrapped in a roasted hazelnut shell glaze.",
     notes: "Addictive combination of crunch and cream. Toasted hazelnut aroma with smooth milk chocolate — reminiscent of your favourite luxury bonbon.",
     ingredients: ["Roasted Hazelnuts", "Milk Chocolate", "Praline Paste", "Feuilletine", "Cocoa Butter"],

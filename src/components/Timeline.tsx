@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, animate, AnimatePresence } from 'framer-motion';
 import { Leaf, Award, Flame, Palette, Gift, Truck, X, Sparkles } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 interface Step {
   icon: React.ReactNode;
@@ -18,11 +19,11 @@ interface CarouselCake {
 }
 
 const CAROUSEL_CAKES: CarouselCake[] = [
-  { id: 1, title: "Royal Ivory Fondant", price: "₹5,000+", image: "/wedding_1.png", tag: "Wedding Tier" },
-  { id: 2, title: "Rose Pétale Meringue", price: "₹1,800", image: "/cake_featured_2.png", tag: "Signature" },
-  { id: 3, title: "L'Aura d'Or Truffle", price: "₹2,500", image: "/cake_featured_1.png", tag: "Best Seller" },
-  { id: 4, title: "Golden Drip Elegance", price: "₹4,500+", image: "/wedding_2.png", tag: "Luxury Drip" },
-  { id: 5, title: "Velours Pistache", price: "₹2,200", image: "/cake_featured_3.png", tag: "Artisanal" },
+  { id: 1, title: "Royal Ivory Fondant", price: "₹5,000+", image: getAssetPath("/wedding_1.png"), tag: "Wedding Tier" },
+  { id: 2, title: "Rose Pétale Meringue", price: "₹1,800", image: getAssetPath("/cake_featured_2.png"), tag: "Signature" },
+  { id: 3, title: "L'Aura d'Or Truffle", price: "₹2,500", image: getAssetPath("/cake_featured_1.png"), tag: "Best Seller" },
+  { id: 4, title: "Golden Drip Elegance", price: "₹4,500+", image: getAssetPath("/wedding_2.png"), tag: "Luxury Drip" },
+  { id: 5, title: "Velours Pistache", price: "₹2,200", image: getAssetPath("/cake_featured_3.png"), tag: "Artisanal" },
 ];
 
 const TIMELINE_STEPS: Step[] = [

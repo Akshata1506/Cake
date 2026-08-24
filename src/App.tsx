@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import AllCakes from './pages/AllCakes';
 import CustomizeCake from './pages/CustomizeCake';
+import { getAssetPath } from './utils/assets';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -58,7 +59,7 @@ export const App: React.FC = () => {
               className="mb-8 relative"
             >
               <img 
-                src="/logo.png" 
+                src={getAssetPath('/logo.png')} 
                 alt="Sweet Slice Logo" 
                 className="w-40 h-40 md:w-56 md:h-56 object-contain rounded-3xl"
                 style={{ 
@@ -125,7 +126,7 @@ export const App: React.FC = () => {
       </AnimatePresence>
 
       {/* Main App Content */}
-      <Router>
+      <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
         <div className="relative min-h-screen bg-cream selection:bg-gold selection:text-chocolate">
           <Navbar />
           <Routes>

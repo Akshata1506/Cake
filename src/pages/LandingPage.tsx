@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
 /* ── Inline SVG Bakery Doodles ── */
 const DoodleCupcake = ({ className = '' }: { className?: string }) => (
@@ -175,7 +176,7 @@ Please confirm my order!`;
           }}
         >
           <img
-            src="/bakery_logo.png"
+            src={getAssetPath('/bakery_logo.png')}
             alt="Bakery Delight Logo"
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -248,11 +249,11 @@ Please confirm my order!`;
               }}
             >
               <img
-                src="/birthday_cake_order.png"
+                src={getAssetPath('/birthday_cake_order.png')}
                 alt="Birthday Cake"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.currentTarget.src = '/cake_featured_1.png';
+                  e.currentTarget.src = getAssetPath('/cake_featured_1.png');
                 }}
               />
             </motion.div>

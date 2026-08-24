@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,7 +58,7 @@ export const Navbar: React.FC = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <img
-            src="/logo.png"
+            src={getAssetPath('/logo.png')}
             alt="Sweet Slice Logo"
             className="w-9 h-9 rounded-full object-cover"
             style={{ border: '1.5px solid rgba(229,91,117,0.25)' }}

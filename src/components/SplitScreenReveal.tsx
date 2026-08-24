@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { getAssetPath } from '../utils/assets';
 
 export const SplitScreenReveal: React.FC = () => {
   const [sliderPosition, setSliderPosition] = useState(50); // 0 to 100
@@ -82,7 +83,7 @@ export const SplitScreenReveal: React.FC = () => {
           {/* Right Side: Finished Cake (Always underneath) */}
           <div className="absolute inset-0 w-full h-full bg-cream-dark">
             <img 
-              src="/cake_finished.png" 
+              src={getAssetPath("/cake_finished.png")} 
               alt="Finished Handcrafted Cake" 
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
@@ -102,7 +103,7 @@ export const SplitScreenReveal: React.FC = () => {
             style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}
           >
             <img 
-              src="/cake_raw_ingredients.png" 
+              src={getAssetPath("/cake_raw_ingredients.png")} 
               alt="Raw Ingredients" 
               className="absolute inset-0 w-full h-full object-cover"
             />

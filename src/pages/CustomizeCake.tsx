@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 
 
@@ -93,7 +94,7 @@ const CustomizeCake: React.FC = () => {
     <div
       className="min-h-screen pt-28 pb-16 px-4 md:px-8 flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: 'url("/bakery_studio_bg.png")',
+        backgroundImage: `url("${getAssetPath('/bakery_studio_bg.png')}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

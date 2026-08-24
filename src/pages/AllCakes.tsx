@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 /* ── Cake data with image ── */
 interface CakeItem {
@@ -15,38 +16,38 @@ const CAKE_CATEGORIES = [
     title: 'Wedding Cakes',
     bgColor: '#ffffff',
     items: [
-      { id: 1,  name: 'Royal Ivory Fondant',       price: '₹5,000+', image: '/wedding_1.png' },
-      { id: 2,  name: 'Golden Drip Elegance',       price: '₹4,500+', image: '/wedding_2.png' },
+      { id: 1,  name: 'Royal Ivory Fondant',       price: '₹5,000+', image: getAssetPath('/wedding_1.png') },
+      { id: 2,  name: 'Golden Drip Elegance',       price: '₹4,500+', image: getAssetPath('/wedding_2.png') },
     ],
   },
   {
     title: 'Birthday Cakes',
     bgColor: '#f9f9f9',
     items: [
-      { id: 3,  name: 'Pink Butterfly Dream',       price: '₹1,500',  image: '/anniversary_1.png' },
-      { id: 4,  name: 'Rose Gold Celebration',      price: '₹1,800',  image: '/anniversary_2.jpg' },
-      { id: 9,  name: 'Floral Heart Delight',       price: '₹1,600',  image: '/anniversary_3.png' },
-      { id: 10, name: 'Blue Horizon Butterfly',     price: '₹1,700',  image: '/anniversary_4.png' },
+      { id: 3,  name: 'Pink Butterfly Dream',       price: '₹1,500',  image: getAssetPath('/anniversary_1.png') },
+      { id: 4,  name: 'Rose Gold Celebration',      price: '₹1,800',  image: getAssetPath('/anniversary_2.jpg') },
+      { id: 9,  name: 'Floral Heart Delight',       price: '₹1,600',  image: getAssetPath('/anniversary_3.png') },
+      { id: 10, name: 'Blue Horizon Butterfly',     price: '₹1,700',  image: getAssetPath('/anniversary_4.png') },
     ],
   },
   {
     title: 'Anniversary Cakes',
     bgColor: '#ffffff',
     items: [
-      { id: 5,  name: 'Red Rose Romance',           price: '₹1,800',  image: '/birthday_1.jpg' },
-      { id: 6,  name: 'Golden Couple Elegance',     price: '₹2,200',  image: '/birthday_2.jpg' },
-      { id: 11, name: 'Swan Lake Love',             price: '₹2,500',  image: '/birthday_3.jpg' },
-      { id: 12, name: 'Monogram Masterpiece',       price: '₹3,000+', image: '/birthday_4.png' },
+      { id: 5,  name: 'Red Rose Romance',           price: '₹1,800',  image: getAssetPath('/birthday_1.jpg') },
+      { id: 6,  name: 'Golden Couple Elegance',     price: '₹2,200',  image: getAssetPath('/birthday_2.jpg') },
+      { id: 11, name: 'Swan Lake Love',             price: '₹2,500',  image: getAssetPath('/birthday_3.jpg') },
+      { id: 12, name: 'Monogram Masterpiece',       price: '₹3,000+', image: getAssetPath('/birthday_4.png') },
     ],
   },
   {
     title: 'Festival Cakes',
     bgColor: '#f9f9f9',
     items: [
-      { id: 7,  name: 'Diwali Grand Celebration',   price: '₹3,600',  image: '/festival_1.jpg' },
-      { id: 8,  name: 'Christmas Yule Log',         price: '₹4,400',  image: '/festival_2.jpg' },
-      { id: 13, name: 'Holi Colorful Drip',         price: '₹2,800',  image: '/festival_3.jpg' },
-      { id: 14, name: 'Eid Chocolate Feast',        price: '₹3,200',  image: '/festival_4.jpg' },
+      { id: 7,  name: 'Diwali Grand Celebration',   price: '₹3,600',  image: getAssetPath('/festival_1.jpg') },
+      { id: 8,  name: 'Christmas Yule Log',         price: '₹4,400',  image: getAssetPath('/festival_2.jpg') },
+      { id: 13, name: 'Holi Colorful Drip',         price: '₹2,800',  image: getAssetPath('/festival_3.jpg') },
+      { id: 14, name: 'Eid Chocolate Feast',        price: '₹3,200',  image: getAssetPath('/festival_4.jpg') },
     ],
   },
 ];

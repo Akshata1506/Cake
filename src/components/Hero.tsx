@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -133,7 +134,7 @@ const Hero: React.FC = () => {
             }}
           >
             <img
-              src="/hero_cake_dark.png"
+              src={getAssetPath('/hero_cake_dark.png')}
               alt="Handcrafted luxury cake by Sweet Slice Studio"
               className="w-full h-auto object-cover"
               style={{ display: 'block', minHeight: '420px', objectFit: 'cover' }}

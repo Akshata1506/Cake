@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Heart, MessageCircle } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 interface ReviewCard {
   id: number;
@@ -14,7 +15,7 @@ interface ReviewCard {
 const REVIEWS: ReviewCard[] = [
   {
     id: 1,
-    image: '/girl_eating_cake.png',
+    image: getAssetPath('/girl_eating_cake.png'),
     name: "Anna Koval",
     review: "I've ordered with friends several times, everyone was delighted! Very delicate and rich cakes. Incredible berry layers and not too sweet—just pure bliss!",
     rating: 5,
@@ -23,10 +24,10 @@ const REVIEWS: ReviewCard[] = [
 ];
 
 const BAKERY_GALLERY = [
-  { id: 1, title: "Artisanal Gift Box", image: "/cake_featured_1.png" },
-  { id: 2, title: "Boutique Bakery Atmosphere", image: "/wedding_1.png" },
-  { id: 3, title: "Fresh French Macarons", image: "/cake_featured_2.png" },
-  { id: 4, title: "Handcrafted Cupcakes", image: "/wedding_2.png" }
+  { id: 1, title: "Artisanal Gift Box", image: getAssetPath("/cake_featured_1.png") },
+  { id: 2, title: "Boutique Bakery Atmosphere", image: getAssetPath("/wedding_1.png") },
+  { id: 3, title: "Fresh French Macarons", image: getAssetPath("/cake_featured_2.png") },
+  { id: 4, title: "Handcrafted Cupcakes", image: getAssetPath("/wedding_2.png") }
 ];
 
 export const Testimonials: React.FC = () => {
