@@ -3,8 +3,8 @@ import { ChefHat } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-chocolate text-cream py-20 px-6 md:px-12 border-t border-chocolate-dark">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+    <footer className="bg-chocolate text-cream py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 border-t border-chocolate-dark w-full max-w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8 w-full">
         
         {/* Col 1: Brand details */}
         <div className="md:col-span-2 space-y-6">

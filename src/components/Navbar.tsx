@@ -43,13 +43,13 @@ export const Navbar: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 px-6 md:px-12 py-4 ${
+      className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 px-4 sm:px-6 md:px-12 py-3 sm:py-4 w-full max-w-full ${
         isScrolled
           ? 'bg-black/90 backdrop-blur-md shadow-sm border-b border-white/10'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
 
         {/* Brand Logo */}
         <Link

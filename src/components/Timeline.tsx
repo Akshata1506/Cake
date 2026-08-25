@@ -126,27 +126,27 @@ export const Timeline: React.FC = () => {
   };
 
   return (
-    <section className="py-28 px-6 md:px-12 relative" style={{ background: '#130f0c' }}>
+    <section className="py-20 md:py-28 px-4 sm:px-6 md:px-12 relative w-full overflow-hidden max-w-full" style={{ background: '#130f0c' }}>
       {/* Decorative vertical lines */}
       <div className="absolute top-0 bottom-0 left-[50%] w-[1px] hidden md:block" style={{ background: 'rgba(229,91,117,0.08)' }} />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 w-full">
         
         {/* Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <span className="text-xs font-bold tracking-[4px] uppercase font-inter" style={{ color: '#e55b75' }}>
             The Heritage Process
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mt-2" style={{ color: '#ffffff' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mt-2 text-white">
             The Journey of a Cake
           </h2>
-          <p className="font-inter max-w-md mx-auto mt-4 text-sm sm:text-base" style={{ color: 'rgba(255,255,255,0.55)' }}>
+          <p className="font-inter max-w-md mx-auto mt-4 text-xs sm:text-sm md:text-base px-2" style={{ color: 'rgba(255,255,255,0.55)' }}>
             Behind every delicate mouthful lies a rigorous symphony of sourcing, baking, and handcrafting.
           </p>
         </div>
 
         {/* ── RESPONSIVE CAKE CAROUSEL GALLERY ── */}
-        <div className="mb-24">
+        <div className="mb-16 md:mb-24 w-full overflow-hidden">
           <div className="text-center mb-4">
             <span className="text-xs font-bold tracking-[2px] uppercase font-inter" style={{ color: '#e55b75' }}>
               Pastry Progress Gallery
@@ -174,9 +174,9 @@ export const Timeline: React.FC = () => {
           </div>
 
           {/* Mobile Version: Auto-scrolling marquee */}
-          <div className="md:hidden overflow-hidden relative" style={{ margin: '0 -1rem' }}>
+          <div className="md:hidden overflow-hidden relative w-full py-2">
             <motion.div
-              className="flex gap-4 px-4 w-max"
+              className="flex gap-4 px-2 w-max"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 ease: "linear",
@@ -188,16 +188,16 @@ export const Timeline: React.FC = () => {
                 <div
                   key={`${cake.id}-${idx}`}
                   onClick={() => { setSelectedCake(cake); setSubmittedSummary(null); }}
-                  className="shrink-0 w-[240px] rounded-2xl p-4 border flex flex-col items-center cursor-pointer active:scale-95 transition-transform"
+                  className="shrink-0 w-[220px] sm:w-[240px] rounded-2xl p-4 border flex flex-col items-center cursor-pointer active:scale-95 transition-transform"
                   style={{ background: 'rgba(255,255,255,0.06)', borderColor: 'rgba(229,91,117,0.2)', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
                 >
-                  <div className="w-full h-40 rounded-xl overflow-hidden relative mb-3">
+                  <div className="w-full h-36 sm:h-40 rounded-xl overflow-hidden relative mb-3">
                     <img src={cake.image} alt={cake.title} className="w-full h-full object-cover object-center" />
                     <div className="absolute top-2 right-2 px-2 py-0.5 bg-black/70 backdrop-blur-sm rounded-full text-[9px] text-[#e55b75] font-bold uppercase tracking-wider shadow-sm">
                       {cake.tag}
                     </div>
                   </div>
-                  <h3 className="font-playfair text-base font-bold text-white text-center">{cake.title}</h3>
+                  <h3 className="font-playfair text-sm sm:text-base font-bold text-white text-center">{cake.title}</h3>
                   <p className="text-xs font-inter font-semibold text-[#e55b75] mt-1">{cake.price}</p>
                 </div>
               ))}
@@ -212,13 +212,13 @@ export const Timeline: React.FC = () => {
         </div>
 
         {/* Steps Flow */}
-        <div className="relative">
+        <div className="relative w-full">
           {TIMELINE_STEPS.map((step, idx) => {
             const isEven = idx % 2 === 0;
             return (
               <div 
                 key={idx} 
-                className={`flex flex-col md:flex-row items-center justify-between mb-20 md:mb-28 last:mb-0 relative ${
+                className={`flex flex-col md:flex-row items-center justify-between mb-12 sm:mb-16 md:mb-28 last:mb-0 relative w-full ${
                   isEven ? 'md:flex-row-reverse' : ''
                 }`}
               >
@@ -240,25 +240,25 @@ export const Timeline: React.FC = () => {
 
                 {/* Left/Right Text Content Card */}
                 <motion.div
-                  initial={{ opacity: 0, x: isEven ? 80 : -80 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, type: 'spring' }}
-                  className="w-full md:w-[45%] rounded-3xl p-8 md:p-10 shadow-premium border relative hover:shadow-premium-hover transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="w-full md:w-[45%] rounded-3xl p-6 sm:p-8 md:p-10 shadow-premium border relative hover:shadow-premium-hover transition-shadow duration-300"
                   style={{ borderColor: 'rgba(229,91,117,0.2)', background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)' }}
                 >
                   <div className="flex items-center gap-3 md:hidden mb-4">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: 'rgba(229,91,117,0.12)', color: '#e55b75' }}>
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0" style={{ background: 'rgba(229,91,117,0.12)', color: '#e55b75' }}>
                       {step.icon}
                     </div>
-                    <span className="font-mono text-xs font-bold" style={{ color: '#e55b75' }}>Step 0{idx + 1}</span>
+                    <span className="font-mono text-xs font-bold text-[#e55b75]">Step 0{idx + 1}</span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-playfair font-bold mb-3" style={{ color: '#ffffff' }}>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-playfair font-bold mb-3 text-white">
                     {step.title}
                   </h3>
                   
-                  <p className="text-sm font-inter leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                  <p className="text-xs sm:text-sm font-inter leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
                     {step.desc}
                   </p>
 

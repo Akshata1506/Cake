@@ -34,18 +34,18 @@ export const Testimonials: React.FC = () => {
   const [activeReview, _setActiveReview] = useState(0);
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-cream-base relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-cream-base relative overflow-hidden w-full max-w-full">
       {/* Background soft pink radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#F8C8DC]/30 filter blur-3xl pointer-events-none z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[700px] md:h-[700px] rounded-full bg-[#F8C8DC]/30 filter blur-3xl pointer-events-none z-0" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 w-full">
         
         {/* Calligraphic Header in soft italic font matching reference */}
-        <div className="text-center mb-16">
-          <span className="text-[#FF8FAB] font-playfair italic text-xl md:text-2xl block mb-1">
+        <div className="text-center mb-10 md:mb-16">
+          <span className="text-[#FF8FAB] font-playfair italic text-lg sm:text-xl md:text-2xl block mb-1">
             Why Our Guests Love Us
           </span>
-          <h2 className="text-3xl md:text-5xl font-playfair font-bold text-[#4A4A4A]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-playfair font-bold text-[#4A4A4A]">
             Real Moments of Sweet Happiness
           </h2>
         </div>

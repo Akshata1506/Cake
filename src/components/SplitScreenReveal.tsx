@@ -58,8 +58,8 @@ export const SplitScreenReveal: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-cream-light relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-cream-light relative overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto w-full">
         
         {/* Narrative Header */}
         <div className="text-center mb-16">

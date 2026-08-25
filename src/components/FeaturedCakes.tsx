@@ -157,12 +157,12 @@ Please confirm my order.`;
   };
 
   return (
-    <section className="py-28 px-6 md:px-12 bg-cream relative">
+    <section className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-cream relative w-full max-w-full overflow-hidden">
       {/* Decorative background blurs */}
-      <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-rose-dark/20 filter blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 rounded-full bg-gold-light/10 filter blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/10 w-64 h-64 md:w-96 md:h-96 rounded-full bg-rose-dark/20 filter blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/10 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gold-light/10 filter blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
         
         {/* Narrative Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">

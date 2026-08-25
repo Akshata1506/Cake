@@ -127,7 +127,7 @@ export const App: React.FC = () => {
 
       {/* Main App Content */}
       <Router>
-        <div className="relative min-h-screen bg-cream selection:bg-gold selection:text-chocolate">
+        <div className="relative min-h-screen bg-cream selection:bg-gold selection:text-chocolate w-full max-w-full overflow-x-hidden">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
